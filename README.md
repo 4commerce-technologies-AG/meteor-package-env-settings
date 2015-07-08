@@ -1,4 +1,4 @@
-# 4commerce:environments
+# 4commerce:env-settings
 
 This [meteorjs](https://www.meteor.com) package allows you to organize your settings inside your private assets directory. The configuration files will be autoloaded during startup based on the active environment.
 
@@ -15,7 +15,7 @@ The config files may be written (also mixed) in YAML and JSON notation.
 You can add this package to your meteor app like any other package from atmosphere
 
 ````
-$ meteor add 4commerce:environments
+$ meteor add 4commerce:env-settings
 ````
 
 ### Directory structure
@@ -45,7 +45,7 @@ private/config/production/public/
 private/config/production/server/
 ````
 
-> You my name your environments as you like but I advise you to stay with the standards like development, production and testing.
+> You may name your environments as you like but I advise you to stay with the standards like development, production and testing.
 
 *Single file configurations*
 
@@ -270,7 +270,7 @@ When you add this package, follwing dependencies will load:
 
 ### Issues & help
 
-In case of support or error please report your issue request. The issue tracker is available at: https://github.com/4commerce-technologies-AG/meteor-package-environments/issues
+In case of support or error please report your issue request. The issue tracker is available at: https://github.com/4commerce-technologies-AG/meteor-package-env-settings/issues
 
 ### Author & Credits
 
