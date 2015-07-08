@@ -10,6 +10,14 @@ Last but not least you can divide your configuration files into partials and get
 
 The config files may be written (also mixed) in YAML and JSON notation. 
 
+### Installation
+
+You can add this package to your meteor app like any other package from atmosphere
+
+````
+$ meteor add 4commerce:environments
+````
+
 ### Directory structure
 
 All configuration files must be placed in
@@ -226,6 +234,10 @@ _Attention_: It is not necessary for the loader, that the partials have the same
 ### Meteor option --settings and METEOR_SETTINGS
 
 In case that we merge and overload the content of your config files to the `Meteor.settings` object, you still can initialize it with the standard options.
+
+### Set mission critical / security values
+
+As said in previous paragraph, you still can load some values to your settings via the `METEOR_SETTINGS` env var. So within that you can place your login credentials like Amazon S3 keys etc. without committing them to your repos. All other app settings getting merged by this package.
 
 ### Template.helpers
 
