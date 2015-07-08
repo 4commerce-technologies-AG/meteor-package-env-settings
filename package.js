@@ -15,6 +15,8 @@ Package.onUse(function(api) {
   api.use('meteorblackbelt:underscore-deep@0.0.3');
   api.use('udondan:yml@3.2.2_1', 'server');
   api.addFiles('environments.js','server');
+  api.use('templating', 'client');
+  api.addFiles('environments-client.js','client');
 });
 
 Package.onTest(function(api) {
