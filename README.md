@@ -99,24 +99,24 @@ Try `console.log(Meteor.settings);` on both client and server and get what has d
 
 [Read more at meteor documentation](http://docs.meteor.com/#/full/meteor_settings)
 
-### Meteor.settings.(public).environment
+### Meteor.settings.(public).runtime
 
-In addition we append a few useful properties automatic during the loading process.
+In addition we append a few useful properties about the runtime environment automatically during the loading process.
 
 *Server only:*
 
 ````
-console.log(Meteor.settings.environment.env); => "development"
+console.log(Meteor.settings.runtime.env); => "development"
 ````
 
 ````
-console.log(Meteor.settings.environment.serverDir); => absolute file path to your meteor server bundle path
+console.log(Meteor.settings.runtime.serverDir); => absolute file path to your meteor server bundle path
 ````
 
 *Public both:*
 
 ````
-console.log(Meteor.settings.public.environment.env); => "development"
+console.log(Meteor.settings.public.runtime.env); => "development"
 ````
 
 ### Grammar

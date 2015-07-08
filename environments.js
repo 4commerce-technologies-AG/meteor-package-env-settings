@@ -144,11 +144,11 @@ Meteor.startup(function () {
   }
 
   // extend Meteor.settings and Meteor.settings.public with some useful addtional attributes
-  Meteor.settings.environment = {
+  Meteor.settings.runtime = {
     env: process.env.NODE_ENV,
     serverDir: serverDir    
   }
-  Meteor.settings.public.environment = {
+  Meteor.settings.public.runtime = {
     env: process.env.NODE_ENV
   }
 
