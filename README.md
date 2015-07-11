@@ -241,17 +241,17 @@ As said in previous paragraph, you still can load some values to your settings v
 
 ### Template.helpers
 
-To have easy access of your settings while rendering templates, there are some helpers with you.
+Starting with release 1.1.0 we switched to package [4commerce:pubsettings-template-helper](https://github.com/4commerce-technologies-AG/meteor-package-pubsettings-template-helper). This package gain access to `Meteor.settings.public` within your templates and is now referenced in this package.
 
-*MeteorSettingsPublic helper*
+*Example:*
 
 ````
 <template name="about">
-  <span>{{MeteorSettingsPublic "application.version"}}</span>
+  <span>{{pubSettings.application.version}}</span>
 </template>
 ````
 
-You have to add the objects element in dotted string notation to the helper. The _path_ is relative to `Meteor.settings.public`.
+Read more at the package's homepage [on GitHub](https://github.com/4commerce-technologies-AG/meteor-package-pubsettings-template-helper).
 
 ### Changes to Meteor.settings
 
