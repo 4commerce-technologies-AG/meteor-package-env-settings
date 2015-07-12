@@ -241,7 +241,25 @@ As said in previous paragraph, you still can load some values to your settings v
 
 ### Template.helpers
 
-Starting with release 1.1.0 we switched to package [4commerce:pubsettings-template-helper](https://github.com/4commerce-technologies-AG/meteor-package-pubsettings-template-helper). This package gain access to `Meteor.settings.public` within your templates and is now referenced in this package.
+From release 1.2.0 we dropped the dependencies to our helper packages. If you want to get easy access to your public settings while working on your templates, we advise you to install one or both of our template helpers for that.
+
+##### meteor-namespace-template-helper
+ 
+See package [4commerce:meteor-namespace-template-helper](https://atmospherejs.com/4commerce/meteor-namespace-template-helper). This package brings the Meteor namespace (Meteor.user, Meteor.settings.public etc.) directly to templates.
+
+*Example:*
+
+````
+<template name="about">
+  <span>{{Meteor.settings.public.application.version}}</span>
+</template>
+````
+
+Read more at the package's homepage [on GitHub](https://github.com/4commerce-technologies-AG/meteor-package-meteor-namespace-template-helper).
+
+##### pubsettings-template-helper
+
+See package [4commerce:pubsettings-template-helper](https://atmospherejs.com/4commerce/pubsettings-template-helper). This package gain access to `Meteor.settings.public` within your templates by a _ShortCut function_.
 
 *Example:*
 
@@ -261,12 +279,19 @@ The object properties of Meteor.settings are allways writeable. We highly advise
 
 The loading process will automatically merge the public settings at the `Meteor.settings.public` element. Therefor and to make sure, that you have not made a typing error, we denied the occurence of a `public` element at root level inside your public and server configurations (only at root level). This should avoid (miss-typed) structures like `Meteor.settings.public.public`. In such a case an error is thrown with the identification of the false file.
 
-### Used packages
+### Package dependencies
 
 When you add this package, follwing dependencies will load:
 
 1. [meteorblackbelt:underscore-deep](https://atmospherejs.com/meteorblackbelt/underscore-deep)
-1. [udondan:yml](https://atmospherejs.com/udondan/yml)
+2. [udondan:yml](https://atmospherejs.com/udondan/yml)
+
+### Related packages
+
+When you add this package, follwing are usefull to add:
+
+1. [4commerce:meteor-namespace-template-helper](https://atmospherejs.com/4commerce/meteor-namespace-template-helper)
+2. [4commerce:pubsettings-template-helper](https://atmospherejs.com/4commerce/pubsettings-template-helper)
 
 ### Issues & help
 

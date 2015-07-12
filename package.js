@@ -1,6 +1,6 @@
 Package.describe({
   name: '4commerce:env-settings',
-  version: '1.1.0',
+  version: '1.2.0',
   summary: 'Autoload settings (YAML, JSON) for server and client from private assets based on NODE_ENV.',
   git: 'https://github.com/4commerce-technologies-AG/meteor-package-env-settings',
   documentation: 'README.md'
@@ -11,7 +11,6 @@ Package.onUse(function(api) {
   api.use('underscore');
   api.use('meteorblackbelt:underscore-deep@0.0.3');
   api.use('udondan:yml@3.2.2_1', 'server');
-  api.use('4commerce:pubsettings-template-helper@1.0.0');
   api.addFiles('env-settings.js','server');
 });
 
